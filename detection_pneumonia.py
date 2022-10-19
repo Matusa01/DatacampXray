@@ -95,8 +95,8 @@ if chart_visual == 'Detection of pneumonia':
   
   history = model.fit(
       train_generator,
-      steps_per_epoch = 10,
-      epochs = 10,
+      steps_per_epoch = 5,
+      epochs = 5,
       validation_data = validation_generator
     )
 
@@ -110,9 +110,9 @@ if chart_visual == 'Detection of pneumonia':
       class_mode = 'binary'
   )
 
-  for i in uploaded_file:
-      image_path = '../Data Camp' + i 
-      img = keras.utils.load_img(image_path, target_size=(100, 100))
+  if uploaded_file is not None:
+      path = '/Data camp/test' + uploaded_file
+      img = keras.utils.load_img(path, target_size=(100, 100))
       x = keras.utils.img_to_array(img)
       x = np.expand_dims(x, axis =0)
       images = np.vstack([x])
