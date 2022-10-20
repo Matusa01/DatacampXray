@@ -39,10 +39,9 @@ if chart_visual == 'Detection of pneumonia':
 
   #Path of each files
   train_normal = os.path.join('./train_cloud/NORMAL_cloud') 
-  st.write(train_normal)
-  train_pneumonia = os.path.join('/Datacamp/train_cloud/PNEUMONIA')
-  test_normal = os.path.join('/test_cloud/NORMAL')
-  test_pneumonia = os.path.join('/test_cloud/PNEUMONIA')
+  train_pneumonia = os.path.join('./train_cloud/PNEUMONIA_cloud')
+  test_normal = os.path.join('./test_cloud/NORMAL_cloud')
+  test_pneumonia = os.path.join('./test_cloud/PNEUMONIA_cloud')
 
   train_normal_names = os.listdir(train_normal)
   train_pneumonia_names = os.listdir(train_pneumonia)
