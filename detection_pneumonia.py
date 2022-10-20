@@ -13,6 +13,7 @@ from tensorflow.keras.models import Model
 from keras.preprocessing import image
 from PIL import Image
 import os
+import scipy
 
 # Index of the page
 st.set_page_config(layout="wide", page_title="Pneumonie_Detection", page_icon="🫁")
