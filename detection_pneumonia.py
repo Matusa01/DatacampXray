@@ -38,10 +38,10 @@ if chart_visual == 'Detection of pneumonia':
   uploaded_file = st.file_uploader("Choose a file", type=['png', 'jpg', 'jpeg'],accept_multiple_files=False)
 
   #Path of each files
-  train_normal = os.path.join('../Data Camp/train/NORMAL')
-  train_pneumonia = os.path.join('../Data Camp/train/PNEUMONIA')
-  test_normal = os.path.join('../Data Camp/test/NORMAL')
-  test_pneumonia = os.path.join('../Data Camp/test/PNEUMONIA')
+  train_normal = os.path.join('../train_cloud/NORMAL')
+  train_pneumonia = os.path.join('../train_cloud/PNEUMONIA')
+  test_normal = os.path.join('../test_cloud/NORMAL')
+  test_pneumonia = os.path.join('../test_cloud/PNEUMONIA')
 
   train_normal_names = os.listdir(train_normal)
   train_pneumonia_names = os.listdir(train_pneumonia)
@@ -84,14 +84,14 @@ if chart_visual == 'Detection of pneumonia':
   test_datagen = ImageDataGenerator(rescale = 1/255)
 
   train_generator = train_datagen.flow_from_directory(
-        '../Data Camp/train/',
+        '../train_cloud/',
         target_size = (300,300),
         batch_size = 128,
         class_mode = 'binary'
     )
 
   validation_generator = test_datagen.flow_from_directory(
-        '../Data Camp/test/',
+        '../test_cloud/',
         target_size = (300, 300),
         batch_size = 128,
         class_mode = 'binary'
