@@ -84,14 +84,14 @@ if chart_visual == 'Detection of pneumonia':
   test_datagen = ImageDataGenerator(rescale = 1/255)
 
   train_generator = train_datagen.flow_from_directory(
-        '/train_cloud/',
+        './train_cloud/',
         target_size = (300,300),
         batch_size = 128,
         class_mode = 'binary'
     )
 
   validation_generator = test_datagen.flow_from_directory(
-        '/test_cloud/',
+        './test_cloud/',
         target_size = (300, 300),
         batch_size = 128,
         class_mode = 'binary'
@@ -107,7 +107,7 @@ if chart_visual == 'Detection of pneumonia':
 
   
   if uploaded_file is not None:
-      path = "./test/PNEUMONIA/"+str(uploaded_file.name)
+      path = "./test_cloud/PNEUMONIA_cloud/"+str(uploaded_file.name)
       img = keras.utils.load_img(path, target_size=(300, 300))
       x = keras.utils.img_to_array(img)
       x = np.expand_dims(x, axis =0)
