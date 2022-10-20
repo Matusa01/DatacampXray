@@ -38,7 +38,7 @@ if chart_visual == 'Detection of pneumonia':
   uploaded_file = st.file_uploader("Choose a file", type=['png', 'jpg', 'jpeg'],accept_multiple_files=False)
 
   #Path of each files
-  train_normal = os.path.join('/train_cloud/NORMAL_cloud') 
+  train_normal = os.path.join('./train_cloud/NORMAL_cloud') 
   st.write(train_normal)
   train_pneumonia = os.path.join('/Datacamp/train_cloud/PNEUMONIA')
   test_normal = os.path.join('/test_cloud/NORMAL')
