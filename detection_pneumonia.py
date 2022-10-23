@@ -29,9 +29,8 @@ if chart_visual == 'Home':
   )
   st.markdown('Pneumonia is an infection of the lungs, most often caused by a virus or bacteria. Specifically, the infection affects the lung alveoli, the tiny balloon-like sacs at the ends of the bronchioles (see diagram below). It usually affects only one of the 5 lobes of the lung (3 lobes in the right lung and 2 in the left), hence the term lobar pneumonia. When pneumonia also affects the bronchioles, it is called bronchopneumonia.')
 
-  video_file = open('Video_pneumonia.mp4', 'rb')
-  video_bytes = video_file.read()
-  st.video(video_bytes)
+  img = Image.open("image_pneumonie.png")
+  st.image(img)
 
 
 if chart_visual == 'Detection of pneumonia':
