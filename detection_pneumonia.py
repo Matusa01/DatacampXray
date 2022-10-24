@@ -14,6 +14,9 @@ from keras.preprocessing import image
 from PIL import Image
 import os
 import scipy
+from streamlit_lottie import st_lottie
+import json
+import requests
 
 # Index of the page
 st.set_page_config(layout="wide", page_title="Pneumonie_Detection", page_icon="🫁")
