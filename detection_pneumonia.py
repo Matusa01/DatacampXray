@@ -177,11 +177,12 @@ if chart_visual == 'About us':
     st.write('  ')
     st.write('  ')
     st.write('  ')
-    col1, col2 = st.columns(2)
-
+    
     with col2:
       image_val = Image.open('val.png')
       st.image(image_val,width = 230)
+    col1, col2 = st.columns(2)
+
 
     with col1 : 
         image_matusa = Image.open('matusa.png')
