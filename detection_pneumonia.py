@@ -81,8 +81,7 @@ if chart_visual == 'Detection of pneumonia':
 
   model.summary()
   model.compile(loss='binary_crossentropy', optimizer=RMSprop(lr=0.001), metrics = ['accuracy'])
-  train_datagen = ImageDataGenerator(rescale = 1/255)
-  test_datagen = ImageDataGenerator(rescale = 1/255)
+  train_datagen = ImageDataGenerator(rescale = 1/255, validation_split=0.2)
 
   train_generator = train_datagen.flow_from_directory(
         './train_cloud/',
@@ -91,12 +90,6 @@ if chart_visual == 'Detection of pneumonia':
         class_mode = 'binary'
     )
 
-  validation_generator = test_datagen.flow_from_directory(
-        './test_cloud/',
-        target_size = (300, 300),
-        batch_size = 128,
-        class_mode = 'binary'
-    )
   
   history = model.fit(
       train_generator,
