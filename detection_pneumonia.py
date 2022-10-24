@@ -138,22 +138,22 @@ if chart_visual == 'Detection of pneumonia':
             st.image(img)
           
 
+
+def load_lottieurlink(url: str):
+  r = requests.get(url)
+  if r.status_code !=200:
+    return None
+  return r.json()
+
+lottie_about_us = load_lottieurlink("https://assets2.lottiefiles.com/packages/lf20_v1yudlrx.json%22)
+
 if chart_visual == 'About us':
-    def load_lottieurlink(url: str):
-      r = requests.get(url)
-      if r.status_code !=200:
-        return None
-      return r.json()
-
-    lottie_about_us = load_lottieurlink("https://assets2.lottiefiles.com/packages/lf20_v1yudlrx.json%22)
-
-    if chart_visual == 'About us':
-      st.title("Our team:")
-      st_lottie(
-        lottie_about_us,
-        speed = 1,
-        quality = "low",
-        loop = True,
+    st.title("Our team:")
+    st_lottie(
+      lottie_about_us,
+      speed = 1,
+      quality = "low",
+      loop = True,
       )
     st.balloons()
   
