@@ -145,19 +145,16 @@ if chart_visual == 'About us':
         return None
       return r.json()
 
-  lottie_about_us = load_lottieurlink("https://assets2.lottiefiles.com/packages/lf20_v1yudlrx.json%22)
+    lottie_about_us = load_lottieurlink("https://assets2.lottiefiles.com/packages/lf20_v1yudlrx.json%22)
 
-  if chart_visual == 'About us':
-    st.title("Our team:")
-    st_lottie(
-      lottie_about_us,
-      speed = 1,
-      quality = "low",
-      loop = True,
-    )
-
-
-
+    if chart_visual == 'About us':
+      st.title("Our team:")
+      st_lottie(
+        lottie_about_us,
+        speed = 1,
+        quality = "low",
+        loop = True,
+      )
     st.balloons()
   
     st.title('About us')
