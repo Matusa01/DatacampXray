@@ -115,9 +115,63 @@ if chart_visual == 'Detection of pneumonia':
       prediction = model.predict(images, batch_size = 128)
       print(prediction[0])
       if prediction[0]> 0.5:
-          st.write("The person has a pneumonia")
-          st.image(img)
-      else:
           st.write("The person has not pneumonia")
           st.image(img)
+      else:
+          st.write("The person has a pneumonia")
+          st.image(img)
           
+
+if chart_visual == 'About us':
+    st.title('About us')
+    st.write('We are 3 students from Efrei Paris. We are currently studying in first year of masters in Business Intelligence and Analytics')
+    st.write('During this semester, we got aksed to do a project in Data camp. So we have choosed the pneumonia detection.')
+    st.write('')
+
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write('')
+    with col2:
+        st.write("Lastname : RASAKUMARAN")
+        st.write("Firstname : Rukshini")
+        st.write("Master : Business Intelligence and Analytics")
+        st.write("Institution : Efrei Paris")
+        st.write("Contacts ")
+        st.write("Email : rukshini.rasakumaran@efrei.net")
+        st.write("Linkedin : @[Rukshini Rasakumaran](https://www.linkedin.com/in/rukshini-rasakumaran/)")
+
+    st.write('  ')
+    st.write('  ')
+    st.write('  ')
+    col1, col2 = st.columns(2)
+
+    with col1 : 
+        st.write('')
+
+    with col2:
+        st.write("Lastname : ROY")
+        st.write("Firstname : Valentin")
+        st.write("Master : Business Intelligence and Analytics")
+        st.write("Institution : Efrei Paris")
+        st.write("Contacts ")
+        st.write("Email : valentin.roy@efrei.net")
+        st.write("Linkedin : @[Valentin Roy](https://www.linkedin.com/in/valentinroy94/)")
+
+    st.write('  ')
+    st.write('  ')
+    st.write('  ')
+    col1, col2 = st.columns(2)
+
+    with col1 : 
+        st.write('')
+
+    with col2:
+        st.write("Lastname : MANOHARAN")
+        st.write("Firstname : Matusa")
+        st.write("Master : Business Intelligence and Analytics")
+        st.write("Institution : Efrei Paris")
+        st.write("Contacts ")
+        st.write("Email : matusa.manoharan@efrei.net")
+        st.write("Linkedin : @[Matusa Manohoran](https://www.linkedin.com/in/matusa-manoharan-31b392194/)")
