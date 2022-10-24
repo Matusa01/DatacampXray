@@ -166,10 +166,7 @@ if chart_visual == 'About us':
     col1, col2 = st.columns(2)
 
     with col1 : 
-        st.write('')
-
-    with col2:
-        st.write("Lastname : ROY")
+                st.write("Lastname : ROY")
         st.write("Firstname : Valentin")
         st.write("Master : Business Intelligence and Analytics")
         st.write("Institution : Efrei Paris")
@@ -181,6 +178,9 @@ if chart_visual == 'About us':
     st.write('  ')
     st.write('  ')
     col1, col2 = st.columns(2)
+
+    with col2:
+      st.write('')
 
     with col1 : 
         st.write('')
