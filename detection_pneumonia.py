@@ -107,7 +107,11 @@ if chart_visual == 'Detection of pneumonia':
 
   
   if uploaded_file is not None:
-      path = "./test_cloud/PNEUMONIA_cloud/"+str(uploaded_file.name)
+      if "normal" in str(uploaded_file.name).lower():
+        path = "./test_cloud/NORMAL_cloud/"+str(uploaded_file.name)
+      
+      else:
+        path = "./test_cloud/PNEUMONIA_cloud/"+str(uploaded_file.name)
       img = keras.utils.load_img(path, target_size=(300, 300))
       x = keras.utils.img_to_array(img)
       x = np.expand_dims(x, axis =0)
