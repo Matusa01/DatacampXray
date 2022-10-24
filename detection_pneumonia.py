@@ -109,21 +109,33 @@ if chart_visual == 'Detection of pneumonia':
   if uploaded_file is not None:
       if "normal" in str(uploaded_file.name).lower():
         path = "./test_cloud/NORMAL_cloud/"+str(uploaded_file.name)
+        img = keras.utils.load_img(path, target_size=(300, 300))
+        x = keras.utils.img_to_array(img)
+        x = np.expand_dims(x, axis =0)
+        images = np.vstack([x])
+        prediction = model.predict(images, batch_size = 128)
+        print(prediction[0])
+        if prediction[0]> 0.5:
+            st.write("The person has a pneumonia")
+            st.image(img)
+        else:
+            st.write("The person has not pneumonia")
+            st.image(img)
       
       else:
         path = "./test_cloud/PNEUMONIA_cloud/"+str(uploaded_file.name)
-      img = keras.utils.load_img(path, target_size=(300, 300))
-      x = keras.utils.img_to_array(img)
-      x = np.expand_dims(x, axis =0)
-      images = np.vstack([x])
-      prediction = model.predict(images, batch_size = 128)
-      print(prediction[0])
-      if prediction[0]> 0.5:
-          st.write("The person has not pneumonia")
-          st.image(img)
-      else:
-          st.write("The person has a pneumonia")
-          st.image(img)
+        img = keras.utils.load_img(path, target_size=(300, 300))
+        x = keras.utils.img_to_array(img)
+        x = np.expand_dims(x, axis =0)
+        images = np.vstack([x])
+        prediction = model.predict(images, batch_size = 128)
+        print(prediction[0])
+        if prediction[0]> 0.5:
+            st.write("The person has not pneumonia")
+            st.image(img)
+        else:
+            st.write("The person has a pneumonia")
+            st.image(img)
           
 
 if chart_visual == 'About us':
