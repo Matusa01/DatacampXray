@@ -149,7 +149,7 @@ if chart_visual == 'About us':
 
     with col1:
         image_ruk = Image.open('ruk.png')
-        st.image(image_ruk,width = 250)
+        st.image(image_ruk,width = 230)
         
     with col2:
         st.write("Lastname : RASAKUMARAN")
