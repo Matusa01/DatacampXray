@@ -3,3 +3,4 @@ keras==2.10.0
 matplotlib==3.6.1
 scipy==1.9.2
 Keras-Preprocessing==1.1.2
+resquests==2.28.1
