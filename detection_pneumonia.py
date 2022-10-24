@@ -140,10 +140,10 @@ if chart_visual == 'Detection of pneumonia':
 
 if chart_visual == 'About us':
     def load_lottieurlink(url: str):
-    r = requests.get(url)
-    if r.status_code !=200:
-      return None
-    return r.json()
+      r = requests.get(url)
+      if r.status_code !=200:
+        return None
+      return r.json()
 
   lottie_about_us = load_lottieurlink("https://assets2.lottiefiles.com/packages/lf20_v1yudlrx.json%22)
 
