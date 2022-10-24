@@ -130,11 +130,11 @@ if chart_visual == 'Detection of pneumonia':
         images = np.vstack([x])
         prediction = model.predict(images, batch_size = 128)
         print(prediction[0])
-        if prediction[0]> 0.5:
-            st.write("The person has not pneumonia")
+        if prediction[0]< 0.5:
+            st.write("The person has a pneumonia")
             st.image(img)
         else:
-            st.write("The person has a pneumonia")
+            st.write("The person has not pneumonia")
             st.image(img)
           
 
