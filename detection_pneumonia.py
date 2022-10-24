@@ -99,8 +99,8 @@ if chart_visual == 'Detection of pneumonia':
   
   history = model.fit(
       train_generator,
-      steps_per_epoch = 5,
-      epochs = 5,
+      steps_per_epoch = 10,
+      epochs = 10,
       validation_data = validation_generator
     )
 
