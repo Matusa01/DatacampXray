@@ -180,10 +180,12 @@ if chart_visual == 'About us':
     col1, col2 = st.columns(2)
 
     with col2:
-      st.write('')
+      image_val = Image.open('val.png')
+      st.image(image_val,width = 230)
 
     with col1 : 
-        st.write('')
+        image_matusa = Image.open('matusa.png')
+        st.image(image_matusa,width = 230)
 
     with col2:
         st.write("Lastname : MANOHARAN")
