@@ -102,7 +102,7 @@ if chart_visual == 'Detection of pneumonia':
       train_generator,
       steps_per_epoch = 10,
       epochs = 10,
-      validation_data = validation_generator
+      validation_data = train_generator
     )
 
 
