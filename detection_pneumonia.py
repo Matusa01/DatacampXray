@@ -87,7 +87,15 @@ if chart_visual == 'Detection of pneumonia':
         './train_cloud/',
         target_size = (300,300),
         batch_size = 128,
-        class_mode = 'binary'
+        class_mode = 'binary',
+        subset='training'
+    )
+  train_generator = train_datagen.flow_from_directory(
+        './train_cloud/',
+        target_size = (300,300),
+        batch_size = 128,
+        class_mode = 'binary',
+        subset='validation'
     )
 
   
